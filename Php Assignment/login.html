@@ -1,0 +1,23 @@
+<!-- Create a login form, both username & password fields are mandatory, after entering the 
+values transfer user control to next web page showing message as “You have login 
+successfully” (use include or require) -->
+
+<html>
+<head>
+<title>Student login page</title>
+</head>
+<body>
+    <center>
+        <h1 id="h1">Login page</h1>
+        <form action="success.php" method="post">
+            <label for="username">username</label>
+            <input type="text" id="username" name="username" required><br><br>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required><br><br>
+
+            <input type="submit" value="login">
+        </form>
+    </center>
+</body>
+</html>

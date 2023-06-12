@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BCCI - Indian Team Batting Statistics</title>
+  <style>
+    canvas {
+      border: 1px solid #000;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+  
+
+  <h1>BCCI - Indian Team Batting Statistics</h1>
+  <canvas id="lineChart" width="400" height="300"></canvas>
+
+  <script>
+    // Get the canvas element
+    const canvas = document.getElementById('lineChart');
+    const ctx = canvas.getContext('2d');
+
+    // Set up the chart data
+    const chartData = [
+      { over: 5, runs: 40 },
+      { over: 10, runs: 75 },
+      { over: 15, runs: 140 },
+      { over: 20, runs: 210 }
+    ];
+
+    const chartWidth = canvas.width;
+    const chartHeight = canvas.height;
+    const padding = 20;
+    const maxY = Math.max(...chartData.map(data => data.runs));
+
+        const xScale = (chartWidth - padding * 2) / (chartData.length - 1);
+    const yScale = (chartHeight - padding * 2) / maxY;
+
+    
+    ctx.beginPath();
+    ctx.moveTo(padding, padding);
+    ctx.lineTo(padding, chartHeight - padding);
+    ctx.lineTo(chartWidth - padding, chartHeight - padding);
+    ctx.stroke();
+
+
+
+    ctx.beginPath();
+    chartData.forEach((data, index) => {
+      const x = padding + index * xScale;
+      const y = chartHeight - padding - data.runs * yScale;
+      
+      ctx.lineTo(x, y);
+      ctx.arc(x, y, 5, 0, 2 * Math.PI);
+    });
+    ctx.stroke();
+
+    
+    ctx.font = '12px Arial';
+    chartData.forEach((data, index) => {
+      const x = padding + index * xScale;
+      const y = chartHeight - padding + 15;
+      ctx.fillText(data.over, x, y);
+    });
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText('Overs', chartWidth / 2, chartHeight - 5);
+    ctx.fillText('Runs', 10, chartHeight / 2);
+    ctx.save();
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,34 @@
+<!-- design a ticketing selling page to sale tickets of rs 250 rs 150 and rs 500 all tickets will be stored in a mysql database which we can subsequently retrieve and populate on webpage with html and php -->
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ticket Selling Page</title>
+</head>
+<body>
+  <h1>Available Tickets</h1>
+  
+  <form action="process.php" method="POST">
+    <label for="ticket_type">Select Ticket Type:</label>
+    <select id="ticket_type" name="ticket_type">
+      <option value="250">Rs. 250</option>
+      <option value="150">Rs. 150</option>
+      <option value="500">Rs. 500</option>
+    </select>
+    <br><br>
+    <input type="submit" value="Buy Ticket">
+  </form>
+  
+  <h2>Available Tickets:</h2>
+  <table>
+    <tr>
+      <th>Ticket ID</th>
+      <th>Ticket Type</th>
+      <th>Price</th>
+    </tr>
+    <?php include 'retrieve_tickets.php'; ?>
+  </table>
+</body>
+</html>

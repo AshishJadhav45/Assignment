@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>PUNE</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    .carousel img {
+      width: 100%;
+      height: 200px;
+    }
+  </style>
+  <script>
+    $(document).ready(function(){
+      $('.carousel').carousel({
+        interval: 1500 // Set the interval between slides in milliseconds (2 seconds in this example)
+      });
+    });
+  </script>
+  <style>
+    h1 {
+      text-align: center;
+      color: blue;
+      font-size: medium;
+    }
+
+    marquee {
+      font-size: 25px;
+    }
+
+    body {
+  font-family: Helvetica;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+.site-header {
+  border-bottom: 1px solid #ccc;
+  padding: 0.5em 1em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.site-identity h1 {
+  font-size: 1.5em;
+  margin: 0.6em 0;
+  display: inline-block;
+}
+
+.site-navigation ul,
+.site-navigation li {
+  margin: 0;
+  padding: 0;
+}
+
+.site-navigation li {
+  display: inline-block;
+  margin: 1.4em 1em 1em 1em;
+}
+header{
+    background-color:aliceblue;
+    font-size: 15px;
+}
+
+.container {
+      position: relative;
+      width: 200px;
+      height: 300px;
+    }
+
+    .bottom-image {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
+    
+    div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+  </style>
+</head>
+
+
+<body>
+    
+    <header class="site-header">
+        <div class="site-identity">
+        <img src="pune.jpg" alt="pune" width="100px">
+       
+        </div>  
+        <nav class="site-navigation">
+            <ul class="nav">
+                <li><a href="#">About</a></li> 
+                <li><a href="#">News</a></li> 
+                <li><a href="#">Home</a></li> 
+            </ul>
+        </nav>
+    </header>
+    <h1>PUNE</h1>
+    
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="dhol.jpg" alt="Image 1">
+      </div>
+      <div class="item">
+        <img src="jmroad.jpg" alt="Image 2">
+      </div>
+      <div class="item">
+        <img src="mandai.jpg" alt="Image 3">
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+  </div>
+
+ 
+
+  <marquee behavior="scroll" direction="left" scrollamount="15" >'पुणे तिथे काय उणे'</marquee>
+<body>
+    
+
+  <h2 align = "center">Gallery</h2>
+  
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="img_5terre.jpg">
+        <img src="shreemant.jpg" alt="Temple" width="600" height="400">
+      </a>
+      <marquee behavior="scrollamount" direction="left">Shreemant Dagdusheth Halwai Ganpati Mandir</marquee>
+      <div class="desc">The Dagadusheth Halwai Ganapati temple is a Hindu Temple located in Pune.</div>
+    </div>
+  </div>
+  
+  
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="img_forest.jpg">
+        <img src="dypimr.jpg" alt="DYPIMR width="600" height="400">
+      </a>
+      <marquee behavior="scrollamount" direction="left">DYPIMR</marquee>
+      <div class="desc">Dr. D. Y. Patil Institute of Management & Research (DYPIMR), Pimpri, was established in 1994. It is an Institute for students who want to pursue MBA, MBA(Digital Marketing) and MCA degree.</div>
+    </div>
+  </div>
+  
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="img_lights.jpg">
+        <img src="iskon.jpg" alt="Northern Lights" width="600" height="400">
+      </a>
+      <marquee behavior="scrollamount" direction="left">ISKON TEMPLE</marquee>
+      <div class="desc">ISKCON (International Society for Krishna Consciousness) is a Hindu religious organization that was founded in 1966 in New York City.</div>
+    </div>
+  </div>
+  
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="img_mountains.jpg">
+        <img src="jmroad.jpg" alt="jmroad" width="600" height="400">
+      </a>
+      <marquee behavior="scrollamount" direction="left">JMroad</marquee>
+      <div class="desc">Jangli Maharaj Road which is conveniently known as J.M. Road starts from Sancheti Hospital intersection opposite to COEP hostel at Shivaginagar and it concludes at Garware Bridge..</div>
+    </div>
+  </div>
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="img_5terre.jpg">
+        <img src="mandai.jpg" alt="Mandai" width="600" height="400">
+      </a>
+      <marquee behavior="scrollamount" direction="left">Mandai</marquee>
+      <div class="desc">In the early years of the British rule an open air vegetable market used to be held outside the Shaniwar Wada. This shifted to an indoor place built by the Poona Municipality.</div>
+    </div>
+  </div>
+  
+  
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="img_forest.jpg">
+        <img src="nda.jpg" alt="nda" width="600" height="400">
+      </a>
+      <marquee behavior="scrollamount" direction="left">NDA</marquee>
+      <div class="desc">The National Defence Academy is the joint defence service training institute of the Indian Armed Forces, where cadets of the three services i.e. the Indian Army,</div>
+    </div>
+  </div>
+  
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="img_lights.jpg">
+        <img src="sinhagad.jpg" alt="fort" width="4 00" height="400">
+      </a>
+      <marquee behavior="scrollamount" direction="left">sinhagad Fort</marquee>
+      <div class="desc">Sinhagad is an ancient hill fortress located at around 49 km southwest of the city of Pune, India. Previously known as Kondhana, the fort had been the site of many battles, most notably the Battle of Sinhagad in 1670. It is Located near the Pune district in Maharashtra.</div>
+    </div>
+  </div>
+  
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="img_mountains.jpg">
+        <img src="swami.jpg" alt="Temple" width="400" height="400">
+      </a>
+
+      <marquee behavior="scrollamount" direction="left">Swami Narayan temple</marquee>
+      <div class="desc">The BAPS Swaminarayan Mandir in Pune is a Hindu temple that was built by the Bochasanwasi Akshar Purushottam Swaminarayan Sanstha (BAPS) organization.</div>
+    </div>
+  </div>
+  
+  <div class="clearfix"></div>
+  
+  </body>

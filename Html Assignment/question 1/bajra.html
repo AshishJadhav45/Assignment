@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Yield of Bajra (2001-2007)</title>
+    <style>
+        canvas {
+            border: 1px solid #ccc;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Yield of Bajra 2001-2007</h1>
+    <canvas id="chart" width="600" height="400"></canvas>
+
+    <script>
+        window.addEventListener('load', drawChart);
+
+        function drawChart() {
+            var canvas = document.getElementById('chart');
+            var ctx = canvas.getContext('2d');
+
+            // Chart data
+            var data = [
+                { year: 2001, yield: 281 },
+                { year: 2002, yield: 277 },
+                { year: 2003, yield: 275 },
+                { year: 2004, yield: 457 },
+                { year: 2005, yield: 200 },
+                { year: 2006, yield: 280 },
+                { year: 2007, yield: 150 }
+            ];
+
+            // Chart dimensions
+            var chartWidth = canvas.width - 40;
+            var chartHeight = canvas.height - 40;
+
+            // Calculate the maximum yield
+            var maxYield = Math.max(...data.map(obj => obj.yield));
+
+            // Calculate the pixel dimensions
+            var xStep = chartWidth / (data.length - 1);
+            var yStep = chartHeight / maxYield;
+
+            // Draw the chart axes
+            ctx.beginPath();
+            ctx.moveTo(20, 20);
+            ctx.lineTo(20, chartHeight + 20);
+            ctx.lineTo(chartWidth + 20, chartHeight + 20);
+            ctx.stroke();
+
+            // Draw the data points and lines
+            ctx.beginPath();
+            ctx.moveTo(20, chartHeight - (data[0].yield * yStep) + 20);
+            for (var i = 1; i < data.length; i++) {
+                var x = i * xStep + 20;
+                var y = chartHeight - (data[i].yield * yStep) + 20;
+                ctx.lineTo(x, y);
+                ctx.arc(x, y, 3, 0, 2 * Math.PI);
+
+                // Display year and yield values
+                ctx.font = '10px Arial';
+                ctx.fillText(data[i].year.toString(), x - 8, chartHeight + 35);
+                ctx.fillText(data[i].yield.toString(), x - 8, y - 10);
+            }
+            ctx.stroke();
+
+            // Chart title
+            ctx.font = '16px Arial';
+            ctx.fillText("Yield of Bajra 2001-2007", 20, 15);
+
+            // X-axis label
+            ctx.font = '12px Arial';
+            ctx.fillText("Year", chartWidth / 2 + 40, chartHeight + 40);
+
+            // Y-axis label
+            ctx.save();
+            ctx.translate(10, chartHeight / 2);
+            ctx.rotate(-Math.PI / 2);
+            ctx.fillText("Yield (lakh tonnes)", 0, 0);
+            ctx.restore();
+        }
+    </script>
+</body>
+</html>
